@@ -1,0 +1,9 @@
+<%= @doctor.name %>
+
+<%= link_to @doctor.name, @doctor %>
+
+<ol>
+  <% @doctor.appointments.each do |app| %>
+    <li><%= app.parse_date_time_24hr %> - <%= link_to app.patient.name, app.patient %></li>
+  <% end %>
+</ol>

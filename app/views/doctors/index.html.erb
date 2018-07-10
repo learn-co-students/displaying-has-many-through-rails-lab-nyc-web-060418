@@ -1,0 +1,7 @@
+<ol>
+<% @doctors.each do |doc| %>
+
+  <li> <%= link_to doc.name, doc %> - <%= doc.count_patients %> patients</li>
+
+<% end %>
+</ol>
